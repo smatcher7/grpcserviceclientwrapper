@@ -82,7 +82,6 @@ public static class ServicesExtensions
                 return Task.CompletedTask;
             });
         }
-
         httpClientBuilder.EnableCallContextPropagation();
     }
 }
