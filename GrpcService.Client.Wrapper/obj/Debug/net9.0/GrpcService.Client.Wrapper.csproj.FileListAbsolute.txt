@@ -1,0 +1,13 @@
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\bin\Debug\net9.0\GrpcService.Client.Wrapper.deps.json
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\bin\Debug\net9.0\GrpcService.Client.Wrapper.dll
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\bin\Debug\net9.0\GrpcService.Client.Wrapper.pdb
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\GrpcService.Client.Wrapper.csproj.AssemblyReference.cache
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\GrpcService.Client.Wrapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\GrpcService.Client.Wrapper.AssemblyInfoInputs.cache
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\GrpcService.Client.Wrapper.AssemblyInfo.cs
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\GrpcService.Client.Wrapper.csproj.CoreCompileInputs.cache
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\GrpcService.Client.Wrapper.sourcelink.json
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\GrpcService.Client.Wrapper.dll
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\refint\GrpcService.Client.Wrapper.dll
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\GrpcService.Client.Wrapper.pdb
+C:\Users\ruife\RiderProjects\grpcserviceclientwrapper\GrpcService.Client.Wrapper\obj\Debug\net9.0\ref\GrpcService.Client.Wrapper.dll
