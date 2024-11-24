@@ -1,0 +1,41 @@
+name: Deploy NuGet Package
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*.*.*' # Triggers on version tags (e.g., v1.0.0)
+
+jobs:
+  publish:
+    runs-on: windows-latest
+
+    steps:
+    # Checkout the repository code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Setup .NET environment
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '9.0' # Replace with your project's .NET version
+
+    # Restore dependencies
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # Build the project
+    - name: Build project
+      run: dotnet build --configuration Release --no-restore
+
+    # Pack the NuGet package
+    - name: Pack NuGet package
+      run: dotnet pack --configuration Release --no-restore --output ./nupkg
+
+    # Push the NuGet package
+    - name: Publish to NuGet.org
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push ./nupkg/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
