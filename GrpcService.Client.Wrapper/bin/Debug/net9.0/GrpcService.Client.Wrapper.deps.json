@@ -6,9 +6,10 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "GrpcService.Client.Wrapper/1.0.0": {
+      "GrpcService.Client.Wrapper/1.0.2": {
         "dependencies": {
           "Grpc.AspNetCore.Server.ClientFactory": "2.67.0-pre1",
+          "Grpc.Net.Client.Web": "2.67.0",
           "Grpc.Net.ClientFactory": "2.67.0-pre1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
         },
@@ -54,6 +55,14 @@
         },
         "runtime": {
           "lib/net8.0/Grpc.Net.Client.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.67.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Client.Web/2.67.0": {
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Client.Web.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.67.0.0"
           }
@@ -134,7 +143,7 @@
     }
   },
   "libraries": {
-    "GrpcService.Client.Wrapper/1.0.0": {
+    "GrpcService.Client.Wrapper/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -166,6 +175,13 @@
       "sha512": "sha512-26KuPAMsVU69z42p9MqdRjwlLetiEwoIerPn2N/T1AbTeFGXJaj1g9ULfFQ0yPM8JSdlOx10SdMrpyp2tss1XA==",
       "path": "grpc.net.client/2.67.0-pre1",
       "hashPath": "grpc.net.client.2.67.0-pre1.nupkg.sha512"
+    },
+    "Grpc.Net.Client.Web/2.67.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UYpZFapiKGK701x2HjwBoZLvqWKR4c1pOuPIPsHFsUjuhTDuq8vSvY0pQbINX4gVIp2eSwWv6x7mXcsEwWyR6A==",
+      "path": "grpc.net.client.web/2.67.0",
+      "hashPath": "grpc.net.client.web.2.67.0.nupkg.sha512"
     },
     "Grpc.Net.ClientFactory/2.67.0-pre1": {
       "type": "package",
