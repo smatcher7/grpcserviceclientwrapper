@@ -71,6 +71,19 @@
           }
         }
       },
+      "Grpc.Net.Client.Web/2.67.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Grpc.Net.Client.Web.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Client.Web.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Grpc.Net.ClientFactory/2.67.0-pre1": {
         "type": "package",
         "dependencies": {
@@ -368,6 +381,34 @@
         "lib/netstandard2.1/Grpc.Net.Client.dll",
         "lib/netstandard2.1/Grpc.Net.Client.pdb",
         "lib/netstandard2.1/Grpc.Net.Client.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Net.Client.Web/2.67.0": {
+      "sha512": "UYpZFapiKGK701x2HjwBoZLvqWKR4c1pOuPIPsHFsUjuhTDuq8vSvY0pQbINX4gVIp2eSwWv6x7mXcsEwWyR6A==",
+      "type": "package",
+      "path": "grpc.net.client.web/2.67.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.net.client.web.2.67.0.nupkg.sha512",
+        "grpc.net.client.web.nuspec",
+        "lib/net6.0/Grpc.Net.Client.Web.dll",
+        "lib/net6.0/Grpc.Net.Client.Web.pdb",
+        "lib/net6.0/Grpc.Net.Client.Web.xml",
+        "lib/net7.0/Grpc.Net.Client.Web.dll",
+        "lib/net7.0/Grpc.Net.Client.Web.pdb",
+        "lib/net7.0/Grpc.Net.Client.Web.xml",
+        "lib/net8.0/Grpc.Net.Client.Web.dll",
+        "lib/net8.0/Grpc.Net.Client.Web.pdb",
+        "lib/net8.0/Grpc.Net.Client.Web.xml",
+        "lib/netstandard2.0/Grpc.Net.Client.Web.dll",
+        "lib/netstandard2.0/Grpc.Net.Client.Web.pdb",
+        "lib/netstandard2.0/Grpc.Net.Client.Web.xml",
+        "lib/netstandard2.1/Grpc.Net.Client.Web.dll",
+        "lib/netstandard2.1/Grpc.Net.Client.Web.pdb",
+        "lib/netstandard2.1/Grpc.Net.Client.Web.xml",
         "packageIcon.png"
       ]
     },
@@ -673,6 +714,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Grpc.AspNetCore.Server.ClientFactory >= 2.67.0-pre1",
+      "Grpc.Net.Client.Web >= 2.67.0",
       "Grpc.Net.ClientFactory >= 2.67.0-pre1",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.0"
     ]
@@ -690,6 +732,7 @@
       "packagesPath": "C:\\Users\\ruife\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ruife\\RiderProjects\\grpcserviceclientwrapper\\GrpcService.Client.Wrapper\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
@@ -730,6 +773,10 @@
           "Grpc.AspNetCore.Server.ClientFactory": {
             "target": "Package",
             "version": "[2.67.0-pre1, )"
+          },
+          "Grpc.Net.Client.Web": {
+            "target": "Package",
+            "version": "[2.67.0, )"
           },
           "Grpc.Net.ClientFactory": {
             "target": "Package",
