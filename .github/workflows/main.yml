@@ -25,7 +25,9 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     # Pack the NuGet package
     - name: Pack NuGet package
-      run: dotnet pack --configuration Release --no-restore --output ./nupkg
+      run: dotnet pack --configuration Release --no-restore -o out
     # Push the NuGet package
-    - name: Publish to NuGet.org
-      run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+    - name: Publish Nuget to NuGet.org
+      run: dotnet nuget push ./grpcserviceclientwrapper/out/*.nupkg -k ${NUGET_TOKEN} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols 
+      env:
+        NUGET_TOKEN: ${{ secrets.NUGET_API_KEY }}
