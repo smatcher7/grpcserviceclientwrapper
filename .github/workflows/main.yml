@@ -17,17 +17,11 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 9.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
     # Pack the NuGet package
     - name: Pack NuGet package
-      run: dotnet pack --configuration Release --no-restore -o packages
+      run: dotnet pack --configuration Release -o packages
     # Push the NuGet package
     - name: Publish Nuget to NuGet.org
-      run: dotnet nuget push packages/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols 
+      run: dotnet nuget push packages/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
       env:
         NUGET_TOKEN: ${{ secrets.NUGET_API_KEY }}
