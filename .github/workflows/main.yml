@@ -22,6 +22,6 @@ jobs:
       run: dotnet pack --configuration Release -o packages
     # Push the NuGet package
     - name: Publish Nuget to NuGet.org
-      run: dotnet nuget push packages/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
+      run: dotnet nuget push .packages/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
       env:
         NUGET_TOKEN: ${{ secrets.NUGET_API_KEY }}
