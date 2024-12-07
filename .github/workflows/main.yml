@@ -8,9 +8,8 @@ on:
       - 'v*.*.*' # Triggers on version tags (e.g., v1.0.0)
 
 jobs:
-  publish:
+  pack:
     runs-on: windows-latest
-
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET
@@ -20,8 +19,20 @@ jobs:
     # Pack the NuGet package
     - name: Pack NuGet package
       run: dotnet pack --configuration Release -o packages
+    - name: Upload NuGet package to GitHub
+      uses: actions/upload-artifact@v2
+      with:
+        name: nugetPackage
+        path: bin/Release/ 
+  publish:
+    runs-on: windows-latest
+    needs: pack
+    steps:
+       #Push NuGet package to GitHub packages
+    - name: Download nuget package artifact
+      uses: actions/download-artifact@v1.0.0
+      with:
+        name: nugetPackage
     # Push the NuGet package
     - name: Publish Nuget to NuGet.org
-      run: dotnet nuget push .packages/**/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
-      env:
-        NUGET_TOKEN: ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push nugetPackage/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
